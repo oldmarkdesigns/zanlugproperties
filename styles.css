@@ -731,6 +731,7 @@ body:has(.detail-page:not(:has(.story-image))) {
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     margin-top: 6px;
+    margin-bottom: 48px;
 }
 
 .detail-gallery-image {
@@ -1008,6 +1009,7 @@ body:has(.detail-page:not(:has(.story-image))) {
     color: rgba(255, 255, 255, 0.95);
     position: relative;
     display: inline-block;
+    width: fit-content;
 }
 
 .story-section-title::after {
@@ -1023,7 +1025,15 @@ body:has(.detail-page:not(:has(.story-image))) {
 }
 
 .story-properties-title {
-    margin-bottom: 40px;
+    margin-bottom: 56px;
+}
+
+.story-content .story-inner .story-properties-title {
+    margin: 0 0 48px 0 !important;
+}
+
+.detail-content .story-properties-title {
+    margin-bottom: 16px;
 }
 
 .story-property {
@@ -1038,6 +1048,10 @@ body:has(.detail-page:not(:has(.story-image))) {
     transition: opacity 0.3s ease;
 }
 
+.detail-content .story-property {
+    margin-bottom: 8px;
+}
+
 .story-property:hover {
     opacity: 0.85;
 }
@@ -1048,6 +1062,11 @@ body:has(.detail-page:not(:has(.story-image))) {
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
+}
+
+.detail-content .story-property-image {
+    width: 140px;
+    height: 95px;
 }
 
 .story-property-content {
@@ -1202,7 +1221,7 @@ body:has(.detail-page:not(:has(.story-image))) {
     .property-name {
         font-size: 3rem;
     }
-
+    
     .detail-layout {
         flex-direction: column;
         padding: 0;
