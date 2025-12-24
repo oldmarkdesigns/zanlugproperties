@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanlüg Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-left navbar-brand-link">
+            <img src="Assets/zanlug-logo.png" alt="Zanlüg Properties" class="navbar-logo">
+            <div class="navbar-brand-text">
+                <span class="navbar-brand-line">Zanlüg</span>
+                <span class="navbar-brand-line">Properties</span>
+            </div>
+        </a>
+        <div class="navbar-center">
+            <a href="our-story.html" class="nav-link" data-translate="nav.our-story">Our story</a>
+            <a href="contact.html" class="nav-link" data-translate="nav.contact">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <div class="language-selector-wrapper">
+                <button class="language-selector-button" id="language-selector-button">
+                    <span class="language-selector-text">English</span>
+                </button>
+                <div class="language-selector-dropdown" id="language-selector-dropdown">
+                    <button class="language-option" data-lang="en">English</button>
+                    <button class="language-option" data-lang="sv">Swedish</button>
+                    <button class="language-option" data-lang="tr">Turkish</button>
+                    <button class="language-option" data-lang="no">Norwegian</button>
+                    <button class="language-option" data-lang="da">Danish</button>
+                    <button class="language-option" data-lang="de">German</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="properties-container">
+        <a href="algo.html" class="property-card" data-location="Älgö">
+            <div class="property-image" style="background-image: url('Assets/Älgö.jpeg');"></div>
+            <div class="property-overlay">
+                <div class="property-content">
+                    <h2 class="property-name">Älgö<span class="property-location">, SALTSJÖBADEN</span></h2>
+                    <span class="read-more" data-translate="home.read-more">Read more</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="gumusluk-bodrum.html" class="property-card" data-location="Gumusluk, Bodrum">
+            <div class="property-image" style="background-image: url('Assets/Bodrum.jpeg');"></div>
+            <div class="property-overlay">
+                <div class="property-content">
+                    <h2 class="property-name">Gumusluk<span class="property-location">, BODRUM</span></h2>
+                    <span class="read-more" data-translate="home.read-more">Read more</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="hede.html" class="property-card" data-location="Hede">
+            <div class="property-image" style="background-image: url('Assets/Hede.jpeg');"></div>
+            <div class="property-overlay">
+                <div class="property-content">
+                    <h2 class="property-name">Hede<span class="property-location">, HÄRJEDALEN</span></h2>
+                    <span class="read-more" data-translate="home.read-more">Read more</span>
+                </div>
+            </div>
+        </a>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
+

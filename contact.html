@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Zanlüg Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-left navbar-brand-link">
+            <img src="Assets/zanlug-logo.png" alt="Zanlüg Properties" class="navbar-logo">
+            <div class="navbar-brand-text">
+                <span class="navbar-brand-line">Zanlüg</span>
+                <span class="navbar-brand-line">Properties</span>
+            </div>
+        </a>
+        <div class="navbar-center">
+            <a href="our-story.html" class="nav-link" data-translate="nav.our-story">Our story</a>
+            <a href="contact.html" class="nav-link" data-translate="nav.contact">Contact</a>
+        </div>
+        <div class="navbar-right">
+            <div class="language-selector-wrapper">
+                <button class="language-selector-button" id="language-selector-button">
+                    <span class="language-selector-text">English</span>
+                </button>
+                <div class="language-selector-dropdown" id="language-selector-dropdown">
+                    <button class="language-option" data-lang="en">English</button>
+                    <button class="language-option" data-lang="sv">Swedish</button>
+                    <button class="language-option" data-lang="tr">Turkish</button>
+                    <button class="language-option" data-lang="no">Norwegian</button>
+                    <button class="language-option" data-lang="da">Danish</button>
+                    <button class="language-option" data-lang="de">German</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="detail-page">
+        <section class="detail-layout">
+            <div class="detail-image-wrapper contact-image-wrapper">
+                <img src="Assets/Älgö.jpeg" alt="Älgö, Saltsjöbaden" class="detail-image">
+                <div class="page-logo-wrapper">
+                    <img src="Assets/zanlug-logo.png" alt="Zanlüg Properties logo" class="page-logo">
+                    <div class="page-brand-text">
+                        <span class="page-brand-line">Zanlüg</span>
+                        <span class="page-brand-line">Properties</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-content">
+                <a href="index.html" class="detail-back">
+                    <span class="detail-back-arrow"></span>
+                    <span data-translate="common.back-to-home">Back to home</span>
+                </a>
+                <div class="contact-inner">
+                    <h1 class="contact-title" data-translate="contact.title">Questions about a stay or property?</h1>
+                    <p class="contact-lead" data-translate="contact.lead">
+                        If you have questions, need practical information, or want to reach the landlord, send us a message and we'll get back to you as soon as we can.
+                    </p>
+
+                    <form class="contact-card">
+                        <div class="contact-field">
+                            <label for="name" class="contact-label" data-translate="contact.label.full-name">Full name</label>
+                            <input id="name" name="name" type="text" class="contact-input" data-translate-placeholder="contact.placeholder.name" placeholder="Your name" />
+                        </div>
+                        <div class="contact-field">
+                            <label for="email" class="contact-label" data-translate="contact.label.email">Email</label>
+                            <input id="email" name="email" type="email" class="contact-input" data-translate-placeholder="contact.placeholder.email" placeholder="you@example.com" />
+                        </div>
+                        <div class="contact-field">
+                            <label for="message" class="contact-label" data-translate="contact.label.message">Message</label>
+                            <textarea id="message" name="message" rows="4" class="contact-input contact-textarea" data-translate-placeholder="contact.placeholder.message" placeholder="Tell us a bit about your plans"></textarea>
+                        </div>
+                        <div class="contact-actions">
+                            <button type="submit" class="contact-button">
+                                <span data-translate="contact.button.send">Send enquiry</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
+
+

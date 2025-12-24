@@ -1,0 +1,1220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+    background: radial-gradient(circle at top, rgba(0,0,0,0.45), transparent 55%), #111;
+}
+
+body:has(.detail-page:not(:has(.story-image))) {
+    overflow-y: hidden;
+}
+
+.page-loaded body {
+    /* no-op, but keeps selector available if needed */
+}
+
+.page-fade {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.page-loaded .page-fade {
+    animation: pageFadeIn 700ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: auto;
+}
+
+.navbar-brand-link {
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 54px;
+    width: auto;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin-left: -14px; /* pull text a bit closer to the logo */
+}
+
+.navbar-brand-line {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar:has(.language-selector-wrapper.active) .navbar-center {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.navbar-right {
+    width: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.language-selector-wrapper {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row-reverse;
+}
+
+.language-selector-button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 0;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.language-selector-button:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.language-selector-text {
+    display: inline-block;
+}
+
+.language-selector-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.language-selector-wrapper.active .language-selector-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.language-option {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 0;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    transition: border-color 0.2s ease, color 0.2s ease, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.language-selector-wrapper.active .language-option {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.language-option[data-lang-selected="true"] {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.language-selector-wrapper.active .language-option:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.language-selector-wrapper.active .language-option:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.language-selector-wrapper.active .language-option:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.language-selector-wrapper.active .language-option:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.language-selector-wrapper.active .language-option:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.language-selector-wrapper.active .language-option:nth-child(6) {
+    transition-delay: 0.3s;
+}
+
+.language-option:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.language-option[data-lang-selected="true"] {
+    display: none;
+}
+
+.nav-link {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar:has(.language-selector-wrapper.active) .nav-link {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Properties Container */
+.properties-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.properties-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 1; /* above cards, below navbar (which is 1000) */
+    pointer-events: none;
+}
+
+.page-loaded .properties-container .property-card {
+    animation: cardFadeIn 700ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.page-loaded .properties-container .property-card:nth-child(1) {
+    animation-delay: 120ms;
+}
+
+.page-loaded .properties-container .property-card:nth-child(2) {
+    animation-delay: 220ms;
+}
+
+.page-loaded .properties-container .property-card:nth-child(3) {
+    animation-delay: 320ms;
+}
+
+/* Property Card */
+.property-card {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;                /* start hidden to avoid initial flash */
+    transform: translateY(14px);
+}
+
+.property-card:hover {
+    z-index: 10;
+}
+
+.property-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Property Overlay */
+.property-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.property-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.property-card:hover .property-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.property-name {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.property-card:hover .property-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.property-location {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+
+.property-card:hover .read-more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.property-card:hover .read-more::after {
+    width: 100%;
+}
+
+/* Property detail pages */
+.detail-page {
+    padding-top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: radial-gradient(circle at top, rgba(0,0,0,0.45), transparent 55%), #111;
+}
+
+.detail-page:has(.story-image) {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+.page-loaded .detail-layout {
+    animation: contentFadeIn 720ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.page-loaded .detail-title {
+    animation: titleFadeIn 680ms cubic-bezier(0.4, 0, 0.2, 1) 120ms forwards;
+}
+
+.page-loaded .detail-lead {
+    animation: contentFadeIn 680ms cubic-bezier(0.4, 0, 0.2, 1) 200ms forwards;
+}
+
+.page-loaded .detail-amenities {
+    animation: contentFadeIn 680ms cubic-bezier(0.4, 0, 0.2, 1) 260ms forwards;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-layout {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    gap: 32px;
+    align-items: stretch;
+    flex-direction: row; /* image left, text/icons right */
+    opacity: 0;                 /* base state to avoid flash */
+    transform: translateY(10px);
+}
+
+.detail-image-wrapper {
+    flex: 0 0 33.333vw; /* match approx width of one card on home */
+    max-width: 33.333vw;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.detail-image-wrapper:has(.page-logo-wrapper) {
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    background-image: url('Assets/Bodrum.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.detail-image-wrapper:has(.page-logo-wrapper)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.page-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-logo {
+    height: 80px;
+    width: auto;
+}
+
+.page-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin-left: -20px;
+}
+
+.page-brand-line {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.detail-image {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+}
+
+.contact-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.contact-image-wrapper .detail-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contact-image-wrapper .page-logo-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.story-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.story-image {
+    object-fit: contain;
+    transform: scale(2.8);
+    background: transparent;
+}
+
+.story-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+}
+
+.story-brand-line {
+    display: block;
+    line-height: 1.2;
+}
+
+.detail-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    gap: 18px;
+    padding: 104px 0 24px 0; /* extra space under navbar for back link, title and icons */
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.detail-booking {
+    flex: 0 0 280px;
+    max-width: 320px;
+    padding: 104px 40px 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 24px; /* vertical gap between Airbnb and Qasa cards */
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.detail-booking .booking-card {
+    margin-top: 0;
+    width: 100%;
+}
+
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.detail-back-arrow {
+    width: 14px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.detail-back-arrow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    width: 6px;
+    height: 6px;
+    border-left: 1px solid rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    transform: rotate(45deg);
+}
+
+.detail-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.detail-location {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.detail-lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 34rem;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.detail-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 34rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.detail-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 10px;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.detail-section-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 10px;
+    margin-bottom: 0; /* combined with icon row margin-top to 12px total */
+}
+
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.detail-gallery-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detail-amenities-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 10px;
+    margin-top: 6px;
+}
+
+/* Booking / Airbnb card */
+.booking-card {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 12px 18px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.booking-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+.booking-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.booking-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.booking-brand {
+    display: none; /* logos replace brand titles in header */
+}
+
+.booking-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.booking-calendar {
+    margin-top: 4px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    row-gap: 6px;
+    column-gap: 4px;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.booking-calendar-day {
+    text-align: center;
+    opacity: 0.65;
+}
+
+.booking-calendar-date {
+    text-align: center;
+    padding: 2px 0;
+    border-radius: 999px;
+}
+
+.booking-calendar-date--active {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.booking-actions {
+    margin-top: 4px;
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.booking-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 999px; /* soft pill that fits inside 24px card radius */
+    border: none;
+    cursor: pointer;
+    background: #ff5a5f;
+    color: white;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.booking-button-logo {
+    display: none; /* no logos inside buttons anymore */
+}
+
+.booking-button-text {
+    display: inline-block;
+}
+
+/* booking-button-icon removed: buttons are text-only now */
+
+.booking-card.booking-card--qasa {
+    background: transparent;
+}
+
+.booking-card--qasa .booking-brand {
+    letter-spacing: 0.18em;
+}
+
+/* Contact page */
+.contact-title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin: 0 0 32px 0;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+
+.contact-lead {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.detail-page .contact-inner {
+    max-width: 70%;
+}
+
+.story-inner {
+    max-width: 75%;
+}
+
+.story-title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin: 0 0 24px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.story-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,3 C15,1 30,4 50,2 C65,0.5 80,3.5 100,2' stroke='rgba(255,255,255,0.6)' stroke-width='2.5' fill='none'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.story-lead {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 10px 0;
+}
+
+.story-body {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 24px 0;
+}
+
+.story-logo-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-top: 32px;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.story-content {
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+}
+
+.scroll-indicator-text {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.scroll-indicator-arrow {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+.story-section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin: 0 0 24px 0;
+    color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    display: inline-block;
+}
+
+.story-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,1.8 Q25,4.2 40,1.2 Q55,0 70,2.8 Q85,4.5 100,1.5' stroke='rgba(255,255,255,0.6)' stroke-width='2.5' fill='none'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.story-properties-title {
+    margin-bottom: 40px;
+}
+
+.story-property {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+    margin-bottom: 28px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.story-property:hover {
+    opacity: 0.85;
+}
+
+.story-property-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.story-property-content {
+    flex: 1;
+}
+
+.story-property-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0 0 8px 0;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.story-property-location {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 8px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-card {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 48px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.contact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-input {
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 6px 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.85rem;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-input:focus {
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    font-family: inherit;
+}
+
+.contact-textarea {
+    border-radius: 0;
+    resize: vertical;
+    min-height: 96px;
+    font-family: inherit;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.contact-button {
+    border-radius: 999px;
+    padding: 8px 20px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-button:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+}
+
+
+.amenity {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.amenity-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenity-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: rgba(255, 255, 255, 0.95);
+    fill: none;
+    stroke-width: 1.4;
+}
+
+.amenity-label {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.amenity-value {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .properties-container {
+        flex-direction: column;
+    }
+    
+    .property-card {
+        flex: 1;
+    }
+    
+    .property-name {
+        font-size: 3rem;
+    }
+
+    .detail-layout {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .detail-content {
+        padding: 20px 16px 24px 16px;
+    }
+
+    .detail-image-wrapper,
+    .detail-image {
+        max-height: 260px;
+    }
+}
+
