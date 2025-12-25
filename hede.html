@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hede, Härjedalen – Zanlüg Properties</title>
+    <title>Särvfjället, Härjedalen – Zanlüg Properties</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="Assets/zanlug-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/zanlug-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/zanlug-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
@@ -37,12 +40,37 @@
                 </div>
             </div>
         </div>
+        <button class="hamburger-menu-button" id="hamburger-menu-button" aria-label="Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-center">
+                    <a href="our-story.html" class="mobile-nav-link" data-translate="nav.our-story">Our story</a>
+                    <a href="contact.html" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+                    <div class="mobile-language-selector-wrapper">
+                        <button class="mobile-language-selector-button" id="mobile-language-selector-button">
+                            <span class="mobile-language-selector-text">English</span>
+                        </button>
+                        <div class="mobile-language-selector-dropdown" id="mobile-language-selector-dropdown">
+                            <button class="mobile-language-option" data-lang="en">English</button>
+                            <button class="mobile-language-option" data-lang="sv">Swedish</button>
+                            <button class="mobile-language-option" data-lang="tr">Turkish</button>
+                            <button class="mobile-language-option" data-lang="no">Norwegian</button>
+                            <button class="mobile-language-option" data-lang="da">Danish</button>
+                            <button class="mobile-language-option" data-lang="de">German</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main class="detail-page">
         <section class="detail-layout">
             <div class="detail-image-wrapper">
-                <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-image">
+                <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-image">
             </div>
             <div class="detail-content">
                 <a href="index.html" class="detail-back">
@@ -50,13 +78,13 @@
                     <span data-translate="common.back-to-home">Back to home</span>
                 </a>
                 <h1 class="detail-title">
-                    Hede<span class="detail-location">, HÄRJEDALEN</span>
+                    Särvfjället<span class="detail-location">, HÄRJEDALEN</span>
                 </h1>
                 <p class="detail-lead" data-translate="property.hede.lead">
                     A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks.
                 </p>
                 <p class="detail-body" data-translate="property.hede.body">
-                    The Hede home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights.
+                    The Särvfjället home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights.
                     Natural timber, wool and stone create a tactile interior that connects directly to the surrounding landscape.
                 </p>
 
@@ -188,14 +216,14 @@
 
                 <div class="detail-section-title" data-translate="common.gallery">Gallery</div>
                 <div class="detail-gallery">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
-                    <img src="Assets/Hede.jpeg" alt="Hede, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
+                    <img src="Assets/Hede.jpeg" alt="Särvfjället, Härjedalen" class="detail-gallery-image">
                 </div>
 
                 <h2 class="story-section-title story-properties-title">Other Properties</h2>
@@ -210,9 +238,9 @@
                 </a>
 
                 <a href="gumusluk-bodrum.html" class="story-property">
-                    <img src="Assets/Bodrum.jpeg" alt="Gumusluk, Bodrum" class="story-property-image">
+                    <img src="Assets/Bodrum.jpeg" alt="Gümüşlük, Bodrum" class="story-property-image">
                     <div class="story-property-content">
-                        <h3 class="story-property-title">Gumusluk<span class="story-property-location">, BODRUM</span></h3>
+                        <h3 class="story-property-title">Gümüşlük<span class="story-property-location">, BODRUM</span></h3>
                         <p class="story-body">
                             A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea.
                         </p>
@@ -220,6 +248,7 @@
                 </a>
             </div>
             <div class="detail-booking">
+                <div class="detail-section-title" data-translate="common.make-reservation">Make a reservation</div>
                 <section class="booking-card">
                     <div class="booking-card-header">
                         <span class="booking-logo">

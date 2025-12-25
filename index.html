@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zanlüg Properties</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="Assets/zanlug-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/zanlug-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/zanlug-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
@@ -37,38 +40,93 @@
                 </div>
             </div>
         </div>
+        <button class="hamburger-menu-button" id="hamburger-menu-button" aria-label="Menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-center">
+                    <a href="our-story.html" class="mobile-nav-link" data-translate="nav.our-story">Our story</a>
+                    <a href="contact.html" class="mobile-nav-link" data-translate="nav.contact">Contact</a>
+                    <div class="mobile-language-selector-wrapper">
+                        <button class="mobile-language-selector-button" id="mobile-language-selector-button">
+                            <span class="mobile-language-selector-text">English</span>
+                        </button>
+                        <div class="mobile-language-selector-dropdown" id="mobile-language-selector-dropdown">
+                            <button class="mobile-language-option" data-lang="en">English</button>
+                            <button class="mobile-language-option" data-lang="sv">Swedish</button>
+                            <button class="mobile-language-option" data-lang="tr">Turkish</button>
+                            <button class="mobile-language-option" data-lang="no">Norwegian</button>
+                            <button class="mobile-language-option" data-lang="da">Danish</button>
+                            <button class="mobile-language-option" data-lang="de">German</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <main class="properties-container">
-        <a href="algo.html" class="property-card" data-location="Älgö">
-            <div class="property-image" style="background-image: url('Assets/Älgö.jpeg');"></div>
-            <div class="property-overlay">
-                <div class="property-content">
+        <div class="home-image-wrapper">
+            <div class="page-logo-wrapper">
+                <img src="Assets/zanlug-logo.png" alt="Zanlüg Properties logo" class="page-logo">
+                <div class="page-brand-text">
+                    <span class="page-brand-line">Zanlüg</span>
+                    <span class="page-brand-line">Properties</span>
+                </div>
+            </div>
+        </div>
+        <div class="properties-list">
+            <h2 class="home-properties-title story-section-title story-properties-title" data-translate="story.section.properties">Our properties</h2>
+            <a href="algo.html" class="property-card" data-location="Älgö">
+                <div class="property-image" style="background-image: url('Assets/Älgö.jpeg');"></div>
+                <div class="property-overlay">
+                    <div class="property-content">
+                        <h2 class="property-name">Älgö<span class="property-location">, SALTSJÖBADEN</span></h2>
+                        <p class="property-description">A serene waterfront retreat tucked into the Stockholm archipelago, where pine forests meet open sea and long summer evenings blend into soft Nordic light.</p>
+                        <span class="read-more" data-translate="home.read-more">Read more</span>
+                    </div>
+                </div>
+                <div class="property-card-content">
                     <h2 class="property-name">Älgö<span class="property-location">, SALTSJÖBADEN</span></h2>
+                    <p class="property-description">A serene waterfront retreat tucked into the Stockholm archipelago, where pine forests meet open sea and long summer evenings blend into soft Nordic light.</p>
                     <span class="read-more" data-translate="home.read-more">Read more</span>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="gumusluk-bodrum.html" class="property-card" data-location="Gumusluk, Bodrum">
-            <div class="property-image" style="background-image: url('Assets/Bodrum.jpeg');"></div>
-            <div class="property-overlay">
-                <div class="property-content">
-                    <h2 class="property-name">Gumusluk<span class="property-location">, BODRUM</span></h2>
+            <a href="gumusluk-bodrum.html" class="property-card" data-location="Gümüşlük, Bodrum">
+                <div class="property-image" style="background-image: url('Assets/Bodrum.jpeg');"></div>
+                <div class="property-overlay">
+                    <div class="property-content">
+                        <h2 class="property-name">Gümüşlük<span class="property-location">, BODRUM</span></h2>
+                        <p class="property-description">A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea.</p>
+                        <span class="read-more" data-translate="home.read-more">Read more</span>
+                    </div>
+                </div>
+                <div class="property-card-content">
+                    <h2 class="property-name">Gümüşlük<span class="property-location">, BODRUM</span></h2>
+                    <p class="property-description">A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea.</p>
                     <span class="read-more" data-translate="home.read-more">Read more</span>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="hede.html" class="property-card" data-location="Hede">
-            <div class="property-image" style="background-image: url('Assets/Hede.jpeg');"></div>
-            <div class="property-overlay">
-                <div class="property-content">
-                    <h2 class="property-name">Hede<span class="property-location">, HÄRJEDALEN</span></h2>
+            <a href="hede.html" class="property-card" data-location="Särvfjället">
+                <div class="property-image" style="background-image: url('Assets/Hede.jpeg');"></div>
+                <div class="property-overlay">
+                    <div class="property-content">
+                        <h2 class="property-name">Särvfjället<span class="property-location">, HÄRJEDALEN</span></h2>
+                        <p class="property-description">A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks.</p>
+                        <span class="read-more" data-translate="home.read-more">Read more</span>
+                    </div>
+                </div>
+                <div class="property-card-content">
+                    <h2 class="property-name">Särvfjället<span class="property-location">, HÄRJEDALEN</span></h2>
+                    <p class="property-description">A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks.</p>
                     <span class="read-more" data-translate="home.read-more">Read more</span>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </main>
 
     <script src="script.js"></script>

@@ -55,19 +55,19 @@ const translations = {
         'story.section.properties': 'Our properties',
         'story.property.algo.title': 'Älgö',
         'story.property.algo.text': 'A serene waterfront retreat tucked into the Stockholm archipelago, where pine forests meet open sea and long summer evenings blend into soft Nordic light. This Älgö residence balances Scandinavian minimalism with warm, natural materials. Generous glazing opens towards the water, while calm, muted interiors keep the focus on the horizon.',
-        'story.property.gumusluk.title': 'Gumusluk',
-        'story.property.gumusluk.text': 'A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea. The Gumusluk residence is designed for long Mediterranean days: shaded outdoor lounges, an infinity pool facing the sea and generous sliding doors that dissolve the boundary between interior and exterior.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks. The Hede home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights.',
+        'story.property.gumusluk.title': 'Gümüşlük',
+        'story.property.gumusluk.text': 'A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea. The Gümüşlük residence is designed for long Mediterranean days: shaded outdoor lounges, an infinity pool facing the sea and generous sliding doors that dissolve the boundary between interior and exterior.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks. The Särvfjället home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights.',
         'story.scroll-indicator': 'Scroll to read more',
         
         // Property descriptions (used on detail pages)
         'property.algo.lead': 'A serene waterfront retreat tucked into the Stockholm archipelago, where pine forests meet open sea and long summer evenings blend into soft Nordic light.',
         'property.algo.body': 'This Älgö residence balances Scandinavian minimalism with warm, natural materials. Generous glazing opens towards the water, while calm, muted interiors keep the focus on the horizon. Every detail is designed to connect you with the archipelago\'s rhythm – from morning coffee with sea views to evening light that stretches across the water.',
         'property.gumusluk.lead': 'A sun-drenched hillside villa overlooking the Aegean, where whitewashed architecture meets soft stone terraces and bougainvillea.',
-        'property.gumusluk.body': 'The Gumusluk residence is designed for long Mediterranean days: shaded outdoor lounges, an infinity pool facing the sea and generous sliding doors that dissolve the boundary between interior and exterior. The interiors blend local stone, natural wood and traditional Turkish craftsmanship, creating spaces that feel both contemporary and deeply connected to place.',
+        'property.gumusluk.body': 'The Gümüşlük residence is designed for long Mediterranean days: shaded outdoor lounges, an infinity pool facing the sea and generous sliding doors that dissolve the boundary between interior and exterior. The interiors blend local stone, natural wood and traditional Turkish craftsmanship, creating spaces that feel both contemporary and deeply connected to place.',
         'property.hede.lead': 'A contemporary mountain lodge framed by birch trees and open views towards the Härjedalen peaks.',
-        'property.hede.body': 'The Hede home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights. Natural timber, wool and stone create a tactile interior that connects directly to the surrounding landscape.'
+        'property.hede.body': 'The Särvfjället home is crafted for all seasons: open fireplaces for winter, generous glazing for low winter sun and deep terraces for long, bright summer nights. Natural timber, wool and stone create a tactile interior that connects directly to the surrounding landscape.'
     },
     sv: {
         'nav.our-story': 'Vår berättelse',
@@ -113,17 +113,17 @@ const translations = {
         'story.section.properties': 'Våra fastigheter',
         'story.property.algo.title': 'Älgö',
         'story.property.algo.text': 'En lugn vattenfrontreträtt gömd i Stockholms skärgård, där tallskogar möter öppet hav och långa sommarkvällar blandas med mjukt nordiskt ljus. Denna Älgö-bostad balanserar skandinavisk minimalism med varmt, naturligt material. Generös glasöppning öppnar mot vattnet, medan lugna, dämpade interiörer håller fokus på horisonten.',
-        'story.property.gumusluk.title': 'Gumusluk',
-        'story.property.gumusluk.text': 'En soldränkt kullvilla med utsikt över Egeiska havet, där vitkalkad arkitektur möter mjuka stenterrasser och bougainvillea. Gumusluk-residensen är designad för långa medelhavsdagar: skuggade utomhusvåningar, en infinity pool vänd mot havet och generösa skjutdörrar som upplöser gränsen mellan interiör och exteriör.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'En samtida bergslodge inramad av björkar och öppna utsikter mot Härjedalens toppar. Hede-hemmet är skapat för alla årstider: öppna spisar för vintern, generös glasöppning för låg vintersol och djupa terrasser för långa, ljusa sommarnätter.',
+        'story.property.gumusluk.title': 'Gümüşlük',
+        'story.property.gumusluk.text': 'En soldränkt kullvilla med utsikt över Egeiska havet, där vitkalkad arkitektur möter mjuka stenterrasser och bougainvillea. Gümüşlük-residensen är designad för långa medelhavsdagar: skuggade utomhusvåningar, en infinity pool vänd mot havet och generösa skjutdörrar som upplöser gränsen mellan interiör och exteriör.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'En samtida bergslodge inramad av björkar och öppna utsikter mot Härjedalens toppar. Särvfjället-hemmet är skapat för alla årstider: öppna spisar för vintern, generös glasöppning för låg vintersol och djupa terrasser för långa, ljusa sommarnätter.',
         'story.scroll-indicator': 'Scrolla för att läsa mer',
         'property.algo.lead': 'En lugn vattenfrontreträtt gömd i Stockholms skärgård, där tallskogar möter öppet hav och långa sommarkvällar blandas med mjukt nordiskt ljus.',
         'property.algo.body': 'Denna Älgö-bostad balanserar skandinavisk minimalism med varmt, naturligt material. Generös glasöppning öppnar mot vattnet, medan lugna, dämpade interiörer håller fokus på horisonten. Varje detalj är designad för att koppla dig till skärgårdens rytm – från morgonkaffe med havsutsikt till kvällsljus som sträcker sig över vattnet.',
         'property.gumusluk.lead': 'En soldränkt kullvilla med utsikt över Egeiska havet, där vitkalkad arkitektur möter mjuka stenterrasser och bougainvillea.',
-        'property.gumusluk.body': 'Gumusluk-residensen är designad för långa medelhavsdagar: skuggade utomhusvåningar, en infinity pool vänd mot havet och generösa skjutdörrar som upplöser gränsen mellan interiör och exteriör. Interiörerna blandar lokal sten, naturligt trä och traditionellt turkiskt hantverk, vilket skapar utrymmen som känns både samtida och djupt sammankopplade med platsen.',
+        'property.gumusluk.body': 'Gümüşlük-residensen är designad för långa medelhavsdagar: skuggade utomhusvåningar, en infinity pool vänd mot havet och generösa skjutdörrar som upplöser gränsen mellan interiör och exteriör. Interiörerna blandar lokal sten, naturligt trä och traditionellt turkiskt hantverk, vilket skapar utrymmen som känns både samtida och djupt sammankopplade med platsen.',
         'property.hede.lead': 'En samtida bergslodge inramad av björkar och öppna utsikter mot Härjedalens toppar.',
-        'property.hede.body': 'Hede-hemmet är skapat för alla årstider: öppna spisar för vintern, generös glasöppning för låg vintersol och djupa terrasser för långa, ljusa sommarnätter. Naturligt timmer, ull och sten skapar en taktil interiör som kopplas direkt till det omgivande landskapet.'
+        'property.hede.body': 'Särvfjället-hemmet är skapat för alla årstider: öppna spisar för vintern, generös glasöppning för låg vintersol och djupa terrasser för långa, ljusa sommarnätter. Naturligt timmer, ull och sten skapar en taktil interiör som kopplas direkt till det omgivande landskapet.'
     },
     tr: {
         'nav.our-story': 'Hikayemiz',
@@ -171,15 +171,15 @@ const translations = {
         'story.property.algo.text': 'Çam ormanlarının açık denizle buluştuğu ve uzun yaz akşamlarının yumuşak İskandinav ışığıyla karıştığı Stockholm takımadalarına gizlenmiş sakin bir sahil evi. Bu Älgö konutu, İskandinav minimalizmini sıcak, doğal malzemelerle dengeler. Cömert cam açıklıkları suya doğru açılırken, sakin, donuk iç mekanlar odağı ufukta tutar.',
         'story.property.gumusluk.title': 'Gümüşlük',
         'story.property.gumusluk.text': 'Beyaz badanalı mimarinin yumuşak taş teraslarla ve begonvillerle buluştuğu Ege\'ye bakan güneşle yıkanmış bir tepe villası. Gümüşlük konutu uzun Akdeniz günleri için tasarlanmıştır: gölgeli açık hava oturma alanları, denize bakan sonsuzluk havuzu ve iç ve dış arasındaki sınırı çözen cömert sürgülü kapılar.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'Huş ağaçlarıyla çerçevelenmiş ve Härjedalen zirvelerine açık manzaraları olan çağdaş bir dağ evi. Hede evi tüm mevsimler için tasarlanmıştır: kış için açık şömineler, düşük kış güneşi için cömert cam açıklıkları ve uzun, parlak yaz geceleri için derin teraslar.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'Huş ağaçlarıyla çerçevelenmiş ve Härjedalen zirvelerine açık manzaraları olan çağdaş bir dağ evi. Särvfjället evi tüm mevsimler için tasarlanmıştır: kış için açık şömineler, düşük kış güneşi için cömert cam açıklıkları ve uzun, parlak yaz geceleri için derin teraslar.',
         'story.scroll-indicator': 'Devamını okumak için kaydırın',
         'property.algo.lead': 'Çam ormanlarının açık denizle buluştuğu ve uzun yaz akşamlarının yumuşak İskandinav ışığıyla karıştığı Stockholm takımadalarına gizlenmiş sakin bir sahil evi.',
         'property.algo.body': 'Bu Älgö konutu, İskandinav minimalizmini sıcak, doğal malzemelerle dengeler. Cömert cam açıklıkları suya doğru açılırken, sakin, donuk iç mekanlar odağı ufukta tutar. Her detay, sizi takımadaların ritmiyle bağlamak için tasarlanmıştır – deniz manzaralı sabah kahvesinden suyun üzerine uzanan akşam ışığına kadar.',
         'property.gumusluk.lead': 'Beyaz badanalı mimarinin yumuşak taş teraslarla ve begonvillerle buluştuğu Ege\'ye bakan güneşle yıkanmış bir tepe villası.',
         'property.gumusluk.body': 'Gümüşlük konutu uzun Akdeniz günleri için tasarlanmıştır: gölgeli açık hava oturma alanları, denize bakan sonsuzluk havuzu ve iç ve dış arasındaki sınırı çözen cömert sürgülü kapılar. İç mekanlar yerel taş, doğal ahşap ve geleneksel Türk zanaatkarını birleştirerek hem çağdaş hem de yere derinden bağlı hissettiren alanlar yaratır.',
         'property.hede.lead': 'Huş ağaçlarıyla çerçevelenmiş ve Härjedalen zirvelerine açık manzaraları olan çağdaş bir dağ evi.',
-        'property.hede.body': 'Hede evi tüm mevsimler için tasarlanmıştır: kış için açık şömineler, düşük kış güneşi için cömert cam açıklıkları ve uzun, parlak yaz geceleri için derin teraslar. Doğal kereste, yün ve taş, çevredeki manzarayla doğrudan bağlantı kuran dokunsal bir iç mekan yaratır.'
+        'property.hede.body': 'Särvfjället evi tüm mevsimler için tasarlanmıştır: kış için açık şömineler, düşük kış güneşi için cömert cam açıklıkları ve uzun, parlak yaz geceleri için derin teraslar. Doğal kereste, yün ve taş, çevredeki manzarayla doğrudan bağlantı kuran dokunsal bir iç mekan yaratır.'
     },
     no: {
         'nav.our-story': 'Vår historie',
@@ -225,17 +225,17 @@ const translations = {
         'story.section.properties': 'Våre eiendommer',
         'story.property.algo.title': 'Älgö',
         'story.property.algo.text': 'En rolig strandsted gjemt i Stockholms skjærgård, hvor furuskoger møter åpent hav og lange sommerkvelder blandes med mykt nordisk lys. Dette Älgö-boligen balanserer skandinavisk minimalisme med varmt, naturlig materiale. Rikelig glassåpning åpner mot vannet, mens rolige, dempede interiører holder fokuset på horisonten.',
-        'story.property.gumusluk.title': 'Gumusluk',
-        'story.property.gumusluk.text': 'En solfylt åssidevilla med utsikt over Egeerhavet, hvor hvitkalket arkitektur møter myke steinterrasser og bougainvillea. Gumusluk-residensen er designet for lange middelhavsdager: skyggede utendørs oppholdsrom, en infinity pool vendt mot havet og rikelige skyvedører som oppløser grensen mellom interiør og eksteriør.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'En samtids fjellhytte innrammet av bjørketrær og åpne utsikter mot Härjedalens topper. Hede-hjemmet er laget for alle årstider: åpne peiser for vinteren, rikelig glassåpning for lav vintersol og dype terrasser for lange, lyse sommernätter.',
+        'story.property.gumusluk.title': 'Gümüşlük',
+        'story.property.gumusluk.text': 'En solfylt åssidevilla med utsikt over Egeerhavet, hvor hvitkalket arkitektur møter myke steinterrasser og bougainvillea. Gümüşlük-residensen er designet for lange middelhavsdager: skyggede utendørs oppholdsrom, en infinity pool vendt mot havet og rikelige skyvedører som oppløser grensen mellom interiør og eksteriør.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'En samtids fjellhytte innrammet av bjørketrær og åpne utsikter mot Härjedalens topper. Särvfjället-hjemmet er laget for alle årstider: åpne peiser for vinteren, rikelig glassåpning for lav vintersol og dype terrasser for lange, lyse sommernätter.',
         'story.scroll-indicator': 'Scroll for å lese mer',
         'property.algo.lead': 'En rolig strandsted gjemt i Stockholms skjærgård, hvor furuskoger møter åpent hav og lange sommerkvelder blandes med mykt nordisk lys.',
         'property.algo.body': 'Dette Älgö-boligen balanserer skandinavisk minimalisme med varmt, naturlig materiale. Rikelig glassåpning åpner mot vannet, mens rolige, dempede interiører holder fokuset på horisonten. Hver detalj er designet for å koble deg til skjærgårdens rytme – fra morgenkaffe med havutsikt til kveldslys som strekker seg over vannet.',
         'property.gumusluk.lead': 'En solfylt åssidevilla med utsikt over Egeerhavet, hvor hvitkalket arkitektur møter myke steinterrasser og bougainvillea.',
-        'property.gumusluk.body': 'Gumusluk-residensen er designet for lange middelhavsdager: skyggede utendørs oppholdsrom, en infinity pool vendt mot havet og rikelige skyvedører som oppløser grensen mellom interiør og eksteriør. Interiørene blander lokal stein, naturlig tre og tradisjonelt tyrkisk håndverk, og skaper rom som føles både samtids og dypt forbundet med stedet.',
+        'property.gumusluk.body': 'Gümüşlük-residensen er designet for lange middelhavsdager: skyggede utendørs oppholdsrom, en infinity pool vendt mot havet og rikelige skyvedører som oppløser grensen mellom interiør og eksteriør. Interiørene blander lokal stein, naturlig tre og tradisjonelt tyrkisk håndverk, og skaper rom som føles både samtids og dypt forbundet med stedet.',
         'property.hede.lead': 'En samtids fjellhytte innrammet av bjørketrær og åpne utsikter mot Härjedalens topper.',
-        'property.hede.body': 'Hede-hjemmet er laget for alle årstider: åpne peiser for vinteren, rikelig glassåpning for lav vintersol og dype terrasser for lange, lyse sommernätter. Naturlig trevirke, ull og stein skaper et taktilt interiør som kobler direkte til det omkringliggende landskapet.'
+        'property.hede.body': 'Särvfjället-hjemmet er laget for alle årstider: åpne peiser for vinteren, rikelig glassåpning for lav vintersol og dype terrasser for lange, lyse sommernätter. Naturlig trevirke, ull og stein skaper et taktilt interiør som kobler direkte til det omkringliggende landskapet.'
     },
     da: {
         'nav.our-story': 'Vores historie',
@@ -281,17 +281,17 @@ const translations = {
         'story.section.properties': 'Vores ejendomme',
         'story.property.algo.title': 'Älgö',
         'story.property.algo.text': 'Et roligt strandsted gemt i Stockholms skærgård, hvor fyrreskove møder åbent hav og lange sommerkvelder blandes med blødt nordisk lys. Denne Älgö-bolig balancerer skandinavisk minimalisme med varmt, naturligt materiale. Generøs glasåbning åbner mod vandet, mens rolige, dæmpede interiører holder fokus på horisonten.',
-        'story.property.gumusluk.title': 'Gumusluk',
-        'story.property.gumusluk.text': 'En solfyldt bjergsidevilla med udsigt over Ægæerhavet, hvor hvidkalket arkitektur møder bløde stenterracer og bougainvillea. Gumusluk-residencen er designet til lange middelhavsdage: skyggede udendørs opholdsrum, en infinity pool vendt mod havet og generøse skydedøre, der opløser grænsen mellem interiør og eksteriør.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'Et samtidigt bjerglodge indrammet af birketræer og åbne udsigter mod Härjedalens toppe. Hede-hjemmet er skabt til alle årstider: åbne pejser til vinteren, generøs glasåbning til lav vintersol og dybe terracer til lange, lyse sommeraftener.',
+        'story.property.gumusluk.title': 'Gümüşlük',
+        'story.property.gumusluk.text': 'En solfyldt bjergsidevilla med udsigt over Ægæerhavet, hvor hvidkalket arkitektur møder bløde stenterracer og bougainvillea. Gümüşlük-residencen er designet til lange middelhavsdage: skyggede udendørs opholdsrum, en infinity pool vendt mod havet og generøse skydedøre, der opløser grænsen mellem interiør og eksteriør.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'Et samtidigt bjerglodge indrammet af birketræer og åbne udsigter mod Härjedalens toppe. Särvfjället-hjemmet er skabt til alle årstider: åbne pejser til vinteren, generøs glasåbning til lav vintersol og dybe terracer til lange, lyse sommeraftener.',
         'story.scroll-indicator': 'Scroll for at læse mere',
         'property.algo.lead': 'Et roligt strandsted gemt i Stockholms skærgård, hvor fyrreskove møder åbent hav og lange sommerkvelder blandes med blødt nordisk lys.',
         'property.algo.body': 'Denne Älgö-bolig balancerer skandinavisk minimalisme med varmt, naturligt materiale. Generøs glasåbning åbner mod vandet, mens rolige, dæmpede interiører holder fokus på horisonten. Hver detalje er designet til at forbinde dig med skærgårdens rytme – fra morgenkaffe med havudsigt til aftenlys, der strækker sig over vandet.',
         'property.gumusluk.lead': 'En solfyldt bjergsidevilla med udsigt over Ægæerhavet, hvor hvidkalket arkitektur møder bløde stenterracer og bougainvillea.',
-        'property.gumusluk.body': 'Gumusluk-residencen er designet til lange middelhavsdage: skyggede udendørs opholdsrum, en infinity pool vendt mod havet og generøse skydedøre, der opløser grænsen mellem interiør og eksteriør. Interiørerne blander lokal sten, naturligt træ og traditionelt tyrkisk håndværk, hvilket skaber rum, der føles både samtidige og dybt forbundet med stedet.',
+        'property.gumusluk.body': 'Gümüşlük-residencen er designet til lange middelhavsdage: skyggede udendørs opholdsrum, en infinity pool vendt mod havet og generøse skydedøre, der opløser grænsen mellem interiør og eksteriør. Interiørerne blander lokal sten, naturligt træ og traditionelt tyrkisk håndværk, hvilket skaber rum, der føles både samtidige og dybt forbundet med stedet.',
         'property.hede.lead': 'Et samtidigt bjerglodge indrammet af birketræer og åbne udsigter mod Härjedalens toppe.',
-        'property.hede.body': 'Hede-hjemmet er skabt til alle årstider: åbne pejser til vinteren, generøs glasåbning til lav vintersol og dybe terracer til lange, lyse sommeraftener. Naturligt tømmer, uld og sten skaber et taktilt interiør, der forbinder direkte til det omgivende landskab.'
+        'property.hede.body': 'Särvfjället-hjemmet er skabt til alle årstider: åbne pejser til vinteren, generøs glasåbning til lav vintersol og dybe terracer til lange, lyse sommeraftener. Naturligt tømmer, uld og sten skaber et taktilt interiør, der forbinder direkte til det omgivende landskab.'
     },
     de: {
         'nav.our-story': 'Unsere Geschichte',
@@ -352,17 +352,17 @@ const translations = {
         'story.section.properties': 'Unsere Immobilien',
         'story.property.algo.title': 'Älgö',
         'story.property.algo.text': 'Ein ruhiger Wassergrund Rückzugsort, versteckt in den Stockholmer Schären, wo Kiefernwälder auf offenes Meer treffen und lange Sommerabende mit sanftem nordischem Licht verschmelzen. Diese Älgö-Residenz vereint skandinavischen Minimalismus mit warmen, natürlichen Materialien. Große Glasflächen öffnen sich zum Wasser, während ruhige, gedämpfte Innenräume den Fokus auf den Horizont lenken.',
-        'story.property.gumusluk.title': 'Gumusluk',
-        'story.property.gumusluk.text': 'Eine sonnendurchflutete Hangvilla mit Blick auf die Ägäis, wo weiße Architektur auf weiche Steinterrassen und Bougainvillea trifft. Die Gumusluk-Residenz ist für lange Mittelmeertage konzipiert: schattige Außenbereiche, ein Infinity-Pool mit Meerblick und großzügige Schiebetüren, die die Grenze zwischen Innen und Außen auflösen.',
-        'story.property.hede.title': 'Hede',
-        'story.property.hede.text': 'Ein zeitgenössisches Berglodge, eingerahmt von Birken und offenen Aussichten auf die Härjedalen-Gipfel. Das Hede-Zuhause ist für alle Jahreszeiten geschaffen: offene Kamine für den Winter, große Glasflächen für tiefe Wintersonne und tiefe Terrassen für lange, helle Sommernächte.',
+        'story.property.gumusluk.title': 'Gümüşlük',
+        'story.property.gumusluk.text': 'Eine sonnendurchflutete Hangvilla mit Blick auf die Ägäis, wo weiße Architektur auf weiche Steinterrassen und Bougainvillea trifft. Die Gümüşlük-Residenz ist für lange Mittelmeertage konzipiert: schattige Außenbereiche, ein Infinity-Pool mit Meerblick und großzügige Schiebetüren, die die Grenze zwischen Innen und Außen auflösen.',
+        'story.property.hede.title': 'Särvfjället',
+        'story.property.hede.text': 'Ein zeitgenössisches Berglodge, eingerahmt von Birken und offenen Aussichten auf die Härjedalen-Gipfel. Das Särvfjället-Zuhause ist für alle Jahreszeiten geschaffen: offene Kamine für den Winter, große Glasflächen für tiefe Wintersonne und tiefe Terrassen für lange, helle Sommernächte.',
         'story.scroll-indicator': 'Zum Weiterlesen scrollen',
         'property.algo.lead': 'Ein ruhiger Wassergrund Rückzugsort, versteckt in den Stockholmer Schären, wo Kiefernwälder auf offenes Meer treffen und lange Sommerabende mit sanftem nordischem Licht verschmelzen.',
         'property.algo.body': 'Diese Älgö-Residenz vereint skandinavischen Minimalismus mit warmen, natürlichen Materialien. Große Glasflächen öffnen sich zum Wasser, während ruhige, gedämpfte Innenräume den Fokus auf den Horizont lenken. Jedes Detail ist darauf ausgelegt, Sie mit dem Rhythmus der Schären zu verbinden – vom Morgenkaffee mit Meerblick bis zum Abendlicht, das sich über das Wasser erstreckt.',
         'property.gumusluk.lead': 'Eine sonnendurchflutete Hangvilla mit Blick auf die Ägäis, wo weiße Architektur auf weiche Steinterrassen und Bougainvillea trifft.',
-        'property.gumusluk.body': 'Die Gumusluk-Residenz ist für lange Mittelmeertage konzipiert: schattige Außenbereiche, ein Infinity-Pool mit Meerblick und großzügige Schiebetüren, die die Grenze zwischen Innen und Außen auflösen. Die Innenräume kombinieren lokalen Stein, natürliches Holz und traditionelles türkisches Handwerk und schaffen Räume, die sich sowohl zeitgenössisch als auch tief mit dem Ort verbunden anfühlen.',
+        'property.gumusluk.body': 'Die Gümüşlük-Residenz ist für lange Mittelmeertage konzipiert: schattige Außenbereiche, ein Infinity-Pool mit Meerblick und großzügige Schiebetüren, die die Grenze zwischen Innen und Außen auflösen. Die Innenräume kombinieren lokalen Stein, natürliches Holz und traditionelles türkisches Handwerk und schaffen Räume, die sich sowohl zeitgenössisch als auch tief mit dem Ort verbunden anfühlen.',
         'property.hede.lead': 'Ein zeitgenössisches Berglodge, eingerahmt von Birken und offenen Aussichten auf die Härjedalen-Gipfel.',
-        'property.hede.body': 'Das Hede-Zuhause ist für alle Jahreszeiten geschaffen: offene Kamine für den Winter, große Glasflächen für tiefe Wintersonne und tiefe Terrassen für lange, helle Sommernächte. Natürliches Holz, Wolle und Stein schaffen ein taktiles Interieur, das direkt mit der umgebenden Landschaft verbindet.'
+        'property.hede.body': 'Das Särvfjället-Zuhause ist für alle Jahreszeiten geschaffen: offene Kamine für den Winter, große Glasflächen für tiefe Wintersonne und tiefe Terrassen für lange, helle Sommernächte. Natürliches Holz, Wolle und Stein schaffen ein taktiles Interieur, das direkt mit der umgebenden Landschaft verbindet.'
     }
 };
 
