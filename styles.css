@@ -1066,6 +1066,314 @@ body.menu-open {
     height: 120px;
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.detail-gallery-image:hover {
+    opacity: 0.85;
+}
+
+.detail-gallery-image--hidden {
+    display: none;
+}
+
+.detail-gallery-item {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.detail-gallery-item--show-all {
+    position: relative;
+}
+
+.detail-gallery-item .detail-gallery-image {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-show-all-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.gallery-show-all-overlay:hover {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.gallery-show-all-text {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Gallery Overlay */
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.gallery-overlay--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-overlay-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 100001;
+}
+
+.gallery-overlay-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-overlay-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+.gallery-overlay-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 100001;
+}
+
+.gallery-overlay-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-overlay-nav--prev {
+    left: 24px;
+}
+
+.gallery-overlay-nav--next {
+    right: 24px;
+}
+
+.gallery-overlay-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+.gallery-overlay-main {
+    width: 100%;
+    max-width: 1400px;
+    padding: 80px 100px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.gallery-overlay-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-height: calc(100vh - 280px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-overlay-image {
+    max-width: 100%;
+    max-height: calc(100vh - 280px);
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.gallery-overlay-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.gallery-overlay-thumbnails {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px 0;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.gallery-overlay-thumbnails::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-overlay-thumbnails::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.gallery-overlay-thumbnails::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.gallery-overlay-thumbnails::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-overlay-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.gallery-overlay-thumbnail:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.gallery-overlay-thumbnail--active {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+@media (max-width: 1024px) {
+    .gallery-overlay-main {
+        padding: 60px 60px 100px;
+    }
+    
+    .gallery-overlay-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gallery-overlay-nav--prev {
+        left: 16px;
+    }
+    
+    .gallery-overlay-nav--next {
+        right: 16px;
+    }
+    
+    .gallery-overlay-close {
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gallery-overlay-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery-overlay-main {
+        padding: 50px 20px 100px;
+    }
+    
+    .gallery-overlay-image-wrapper {
+        max-height: calc(100vh - 240px);
+    }
+    
+    .gallery-overlay-image {
+        max-height: calc(100vh - 240px);
+    }
+    
+    .gallery-overlay-nav {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .gallery-overlay-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .gallery-overlay-nav--prev {
+        left: 12px;
+    }
+    
+    .gallery-overlay-nav--next {
+        right: 12px;
+    }
+    
+    .gallery-overlay-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .gallery-overlay-close svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .gallery-overlay-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .gallery-overlay-counter {
+        bottom: -32px;
+        font-size: 0.75rem;
+    }
 }
 
 .detail-amenities-secondary {

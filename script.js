@@ -164,5 +164,123 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+    // Gallery overlay functionality
+    const initGalleryOverlay = () => {
+        const gallery = document.querySelector('.detail-gallery');
+        if (!gallery) return;
+        
+        const overlay = document.getElementById('gallery-overlay');
+        const overlayImage = document.getElementById('gallery-overlay-image');
+        const overlayCounter = document.getElementById('gallery-overlay-counter');
+        const overlayThumbnails = document.getElementById('gallery-overlay-thumbnails');
+        const overlayClose = document.getElementById('gallery-overlay-close');
+        const overlayPrev = document.getElementById('gallery-overlay-prev');
+        const overlayNext = document.getElementById('gallery-overlay-next');
+        
+        if (!overlay || !overlayImage || !overlayCounter || !overlayThumbnails) return;
+        
+        // Get all gallery images (including hidden ones)
+        const allImages = Array.from(gallery.querySelectorAll('.detail-gallery-image'));
+        let currentIndex = 0;
+        
+        // Build thumbnails
+        const buildThumbnails = () => {
+            overlayThumbnails.innerHTML = '';
+            allImages.forEach((img, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = img.src;
+                thumb.alt = img.alt;
+                thumb.className = 'gallery-overlay-thumbnail';
+                if (index === currentIndex) {
+                    thumb.classList.add('gallery-overlay-thumbnail--active');
+                }
+                thumb.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateGallery();
+                });
+                overlayThumbnails.appendChild(thumb);
+            });
+        };
+        
+        // Update gallery display
+        const updateGallery = () => {
+            if (currentIndex < 0) currentIndex = allImages.length - 1;
+            if (currentIndex >= allImages.length) currentIndex = 0;
+            
+            const currentImage = allImages[currentIndex];
+            overlayImage.src = currentImage.src;
+            overlayImage.alt = currentImage.alt;
+            overlayCounter.textContent = `${currentIndex + 1} / ${allImages.length}`;
+            
+            // Update active thumbnail
+            const thumbnails = overlayThumbnails.querySelectorAll('.gallery-overlay-thumbnail');
+            thumbnails.forEach((thumb, index) => {
+                if (index === currentIndex) {
+                    thumb.classList.add('gallery-overlay-thumbnail--active');
+                } else {
+                    thumb.classList.remove('gallery-overlay-thumbnail--active');
+                }
+            });
+        };
+        
+        // Open gallery
+        const openGallery = (index) => {
+            currentIndex = index;
+            updateGallery();
+            buildThumbnails();
+            overlay.classList.add('gallery-overlay--active');
+            document.body.style.overflow = 'hidden';
+        };
+        
+        // Close gallery
+        const closeGallery = () => {
+            overlay.classList.remove('gallery-overlay--active');
+            document.body.style.overflow = '';
+        };
+        
+        // Event listeners for gallery images
+        allImages.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                openGallery(index);
+            });
+        });
+        
+        // Event listeners for overlay controls
+        overlayClose.addEventListener('click', closeGallery);
+        overlayPrev.addEventListener('click', () => {
+            currentIndex--;
+            updateGallery();
+        });
+        overlayNext.addEventListener('click', () => {
+            currentIndex++;
+            updateGallery();
+        });
+        
+        // Close on overlay background click
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeGallery();
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!overlay.classList.contains('gallery-overlay--active')) return;
+            
+            if (e.key === 'Escape') {
+                closeGallery();
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex--;
+                updateGallery();
+            } else if (e.key === 'ArrowRight') {
+                currentIndex++;
+                updateGallery();
+            }
+        });
+    };
+    
+    initGalleryOverlay();
 });
 
