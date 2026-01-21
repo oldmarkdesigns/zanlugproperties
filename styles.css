@@ -934,8 +934,12 @@ body.menu-open {
 }
 
 .detail-booking .booking-card {
-    margin-top: 6px;
+    margin-top: 0;
     width: 100%;
+}
+
+.detail-booking .booking-card + .booking-card {
+    margin-top: 4px;
 }
 
 @media (max-width: 767px) {
@@ -1384,22 +1388,256 @@ body.menu-open {
     margin-top: 6px;
 }
 
+.amenities-category {
+    margin-top: 24px;
+}
+
+.amenities-category:first-of-type {
+    margin-top: 6px;
+}
+
+.amenities-content {
+    display: none;
+}
+
+.show-amenities-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 12px 16px;
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.show-amenities-button:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+}
+
+.show-amenities-button-text {
+    display: inline-block;
+}
+
+.show-amenities-button-chevron {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.show-amenities-button:hover .show-amenities-button-chevron {
+    transform: translateX(4px);
+}
+
+/* Amenities Overlay */
+.amenities-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+}
+
+.amenities-overlay--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.amenities-overlay-content {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    max-height: 85vh;
+    background: rgba(17, 17, 17, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    color: white;
+    padding: 32px 32px 32px;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.amenities-overlay-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 10;
+}
+
+.amenities-overlay-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.amenities-overlay-close svg {
+    width: 18px;
+    height: 18px;
+}
+
+.amenities-overlay-content .detail-section-title {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    margin-top: 0;
+}
+
+.amenities-overlay-content .amenities-category {
+    margin-top: 28px;
+}
+
+.amenities-overlay-content .amenities-category:first-of-type {
+    margin-top: 0;
+}
+
+.amenities-overlay-content .amenities-category-title {
+    font-size: 0.7rem;
+    margin-bottom: 14px;
+}
+
+.amenities-overlay-content .detail-amenities-secondary {
+    column-gap: 32px;
+    row-gap: 16px;
+}
+
+@media (max-width: 767px) {
+    .amenities-overlay {
+        padding: 16px;
+    }
+    
+    .amenities-overlay-content {
+        max-height: 90vh;
+        padding: 20px 20px 24px;
+        border-radius: 12px;
+    }
+    
+    .amenities-overlay-close {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .amenities-overlay-close svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .show-amenities-button {
+        padding: 10px 14px;
+        font-size: 0.7rem;
+    }
+    
+    .show-amenities-button-chevron {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .amenities-overlay-content .detail-section-title {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+    }
+    
+    .amenities-overlay-content .amenities-category {
+        margin-top: 24px;
+    }
+    
+    .amenities-overlay-content .amenities-category-title {
+        font-size: 0.65rem;
+        margin-bottom: 12px;
+    }
+    
+    .amenities-overlay-content .detail-amenities-secondary {
+        column-gap: 24px;
+        row-gap: 12px;
+    }
+}
+
+.amenities-category-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+}
+
 @media (max-width: 767px) {
     .detail-amenities-secondary {
         margin-top: 0;
+    }
+    
+    .amenities-category {
+        margin-top: 20px;
+    }
+    
+    .amenities-category:first-of-type {
+        margin-top: 0;
+    }
+    
+    .amenities-category-title {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
     }
 }
 
 /* Booking / Airbnb card */
 .booking-card {
-    margin-top: 20px;
+    margin-top: 0;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 24px;
-    padding: 12px 18px 12px;
+    padding: 8px 18px 8px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.detail-booking .booking-card:not(:first-child) {
+    margin-top: 8px;
+}
+
+.booking-card--link {
+    cursor: pointer;
+}
+
+.booking-card--link:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .booking-card-header {
@@ -1408,6 +1646,8 @@ body.menu-open {
     gap: 8px;
     margin-top: -8px;
     margin-bottom: -8px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .booking-logo {
@@ -1431,6 +1671,25 @@ body.menu-open {
 
 .booking-brand {
     display: none; /* logos replace brand titles in header */
+}
+
+.booking-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease, transform 0.2s ease;
+    margin-left: auto;
+}
+
+.booking-chevron svg {
+    width: 20px;
+    height: 20px;
+}
+
+.booking-card--link:hover .booking-chevron {
+    color: rgba(255, 255, 255, 0.9);
+    transform: translateX(4px);
 }
 
 .booking-title {
@@ -1489,6 +1748,7 @@ body.menu-open {
     cursor: pointer;
     background: #ff5a5f;
     color: white;
+    text-decoration: none;
     font-size: 0.68rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1503,6 +1763,14 @@ body.menu-open {
 
 .booking-button-text {
     display: inline-block;
+}
+
+a.booking-button {
+    text-decoration: none;
+}
+
+a.booking-button:hover {
+    background: #ff4449;
 }
 
 /* booking-button-icon removed: buttons are text-only now */
@@ -2137,7 +2405,7 @@ body.menu-open {
     
     .detail-content .detail-booking .detail-section-title {
         margin-top: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         width: 100%;
         flex: 0 0 100%;
         order: -1;
@@ -2152,6 +2420,10 @@ body.menu-open {
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
+    }
+    
+    .detail-content .detail-booking .booking-card:not(:first-child) {
+        margin-top: 8px !important;
     }
     
     .detail-gallery {
@@ -2486,7 +2758,7 @@ body.menu-open {
     
     .detail-content .detail-booking .detail-section-title {
         margin-top: 24px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
     
     .detail-content .detail-booking .booking-card {
@@ -2500,6 +2772,9 @@ body.menu-open {
         flex: 1 1 100% !important;
     }
     
+    .detail-content .detail-booking .booking-card:not(:first-child) {
+        margin-top: 8px !important;
+    }
     
     .detail-title {
         font-size: 2.5rem;
@@ -2621,7 +2896,7 @@ body.menu-open {
     
     /* Booking cards */
     .booking-card {
-        padding: 14px 16px 14px;
+        padding: 8px 16px 8px;
     }
     
     .booking-logo {

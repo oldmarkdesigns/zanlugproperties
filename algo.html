@@ -159,7 +159,13 @@
                     </div>
                 </div>
 
-                <div class="detail-section-title" data-translate="common.amenities">Amenities</div>
+                <button class="show-amenities-button" data-translate="common.show-all-amenities">
+                    <span class="show-amenities-button-text">Show all amenities</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="show-amenities-button-chevron">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                <div id="amenities-content" class="amenities-content">
                 <div class="detail-amenities-secondary">
                     <div class="amenity">
                         <span class="amenity-icon">
@@ -214,6 +220,7 @@
                         <div class="amenity-label" data-translate="amenity.guest-rooms">Guest rooms</div>
                     </div>
                 </div>
+                </div>
 
                 <div class="detail-section-title" data-translate="common.gallery">Gallery</div>
                 <div class="detail-gallery">
@@ -250,98 +257,49 @@
             </div>
             <div class="detail-booking">
                 <div class="detail-section-title" data-translate="common.make-reservation">Make a reservation</div>
-                <section class="booking-card">
+                <a href="#" class="booking-card booking-card--link">
                     <div class="booking-card-header">
                         <span class="booking-logo">
                             <img src="Assets/Airbnb_Logo_Belo.svg.png" alt="Airbnb logo" />
                         </span>
                         <span class="booking-brand">Airbnb</span>
+                        <span class="booking-chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </span>
                     </div>
-                    <div class="booking-title" data-translate="common.check-availability">Check availability</div>
-                    <div class="booking-calendar">
-                        <div class="booking-calendar-day">M</div>
-                        <div class="booking-calendar-day">T</div>
-                        <div class="booking-calendar-day">W</div>
-                        <div class="booking-calendar-day">T</div>
-                        <div class="booking-calendar-day">F</div>
-                        <div class="booking-calendar-day">S</div>
-                        <div class="booking-calendar-day">S</div>
-                        <div class="booking-calendar-date">8</div>
-                        <div class="booking-calendar-date booking-calendar-date--active">9</div>
-                        <div class="booking-calendar-date booking-calendar-date--active">10</div>
-                        <div class="booking-calendar-date">11</div>
-                        <div class="booking-calendar-date">12</div>
-                        <div class="booking-calendar-date">13</div>
-                        <div class="booking-calendar-date">14</div>
-                        <div class="booking-calendar-date">15</div>
-                        <div class="booking-calendar-date">16</div>
-                        <div class="booking-calendar-date">17</div>
-                        <div class="booking-calendar-date">18</div>
-                        <div class="booking-calendar-date">19</div>
-                        <div class="booking-calendar-date">20</div>
-                        <div class="booking-calendar-date">21</div>
-                        <div class="booking-calendar-date">22</div>
-                        <div class="booking-calendar-date">23</div>
-                        <div class="booking-calendar-date">24</div>
-                        <div class="booking-calendar-date">25</div>
-                        <div class="booking-calendar-date">26</div>
-                        <div class="booking-calendar-date">27</div>
-                        <div class="booking-calendar-date">28</div>
-                    </div>
-                    <div class="booking-actions">
-                        <button class="booking-button" type="button">
-                            <span class="booking-button-text" data-translate="common.make-reservation">Make a reservation</span>
-                        </button>
-                    </div>
-                </section>
+                </a>
 
-                <section class="booking-card booking-card--qasa">
+                <a href="#" class="booking-card booking-card--qasa booking-card--link">
                     <div class="booking-card-header">
                         <span class="booking-logo">
                             <img src="Assets/1-Qasa-Proptech-Property-Technology-Branding-Custom-Logotype-Bold-Scandinavia-BPO.png" alt="Qasa logo" style="border-radius: 999px;" />
                         </span>
                         <span class="booking-brand">Qasa</span>
+                        <span class="booking-chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </span>
                     </div>
-                    <div class="booking-title" data-translate="common.check-availability">Check availability</div>
-                    <div class="booking-calendar">
-                        <div class="booking-calendar-day">M</div>
-                        <div class="booking-calendar-day">T</div>
-                        <div class="booking-calendar-day">W</div>
-                        <div class="booking-calendar-day">T</div>
-                        <div class="booking-calendar-day">F</div>
-                        <div class="booking-calendar-day">S</div>
-                        <div class="booking-calendar-day">S</div>
-                        <div class="booking-calendar-date">1</div>
-                        <div class="booking-calendar-date booking-calendar-date--active">2</div>
-                        <div class="booking-calendar-date booking-calendar-date--active">3</div>
-                        <div class="booking-calendar-date">4</div>
-                        <div class="booking-calendar-date">5</div>
-                        <div class="booking-calendar-date">6</div>
-                        <div class="booking-calendar-date">7</div>
-                        <div class="booking-calendar-date">8</div>
-                        <div class="booking-calendar-date">9</div>
-                        <div class="booking-calendar-date">10</div>
-                        <div class="booking-calendar-date">11</div>
-                        <div class="booking-calendar-date">12</div>
-                        <div class="booking-calendar-date">13</div>
-                        <div class="booking-calendar-date">14</div>
-                        <div class="booking-calendar-date">15</div>
-                        <div class="booking-calendar-date">16</div>
-                        <div class="booking-calendar-date">17</div>
-                        <div class="booking-calendar-date">18</div>
-                        <div class="booking-calendar-date">19</div>
-                        <div class="booking-calendar-date">20</div>
-                        <div class="booking-calendar-date">21</div>
-                    </div>
-                    <div class="booking-actions">
-                        <button class="booking-button" type="button">
-                            <span class="booking-button-text" data-translate="common.make-reservation">Make a reservation</span>
-                        </button>
-                    </div>
-                </section>
+                </a>
             </div>
         </section>
     </main>
+
+    <!-- Amenities Overlay -->
+    <div class="amenities-overlay" id="amenities-overlay">
+        <div class="amenities-overlay-content" id="amenities-overlay-content">
+            <button class="amenities-overlay-close" id="amenities-overlay-close" aria-label="Close amenities">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <!-- Content will be moved here by JavaScript -->
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="translations.js"></script>
